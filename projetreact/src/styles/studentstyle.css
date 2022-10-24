@@ -1,0 +1,12 @@
+.student_tile{
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pic_container{
+    border-radius: 20%;
+    overflow: hidden;
+    height: 80%;
+    width: 80%;
+}
