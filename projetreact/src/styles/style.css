@@ -32,13 +32,15 @@
 }
 
 .register_container,
-.register_form {
+.register_form,
+.post_form {
   display: flex;
   flex-direction: column;
 }
 
 .register_form > input,
-.register_button {
+.register_button,
+.post_form > input {
   width: 30%;
   height: 3%;
   margin: 0 auto;
@@ -52,4 +54,23 @@
   width: 30%;
   padding-bottom: 2%;
   margin: 0 auto;
+}
+
+.post {
+  width: 80%;
+  border: 1px rgb(150, 150, 150) solid;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 1%;
+  margin-bottom: 3%;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.user {
+  font-style: italic;
+  font-size: 12px;
+  text-align: right;
 }

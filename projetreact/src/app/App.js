@@ -6,6 +6,8 @@ import "../styles/style.css";
 import XpPro from "../components/pro";
 import Compteur from "../components/compteur";
 import Register from "../components/register";
+import Listposts from "../components/listposts";
+import Postpost from "../components/newpost";
 
 function App() {
   /*   const [name, setName] = useState("Ash Williams");
@@ -20,7 +22,8 @@ function App() {
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
   ); */
 
-  const [time, setTime] = useState(new Date());
+  /* const [time, setTime] = useState(new Date());
+  
   const hour = time.getHours();
   const min = time.getMinutes();
   const sec = time.getSeconds();
@@ -35,13 +38,16 @@ function App() {
     setTimeout(() => {
       alert("PROUT !!!");
     }, 10000);
-  }, []);
+  }, []); */
+
+  const [sent, setSent] = useState(false);
+  const [newpost, setNewpost] = useState({});
 
   return (
     <>
-      <h1>
+      {/* <h1>
         🕐 Il est {hour}h {min}min {sec}sec 🕐
-      </h1>
+      </h1> */}
       {/* <div className="profile_container">
     <div className="pic_container">
     <ProfilePic 
@@ -72,6 +78,9 @@ function App() {
     </div> */}
       {/*      <Compteur/> */}
       {/* <Register/> */}
+      <Postpost setNewpost={setNewpost} setSent={setSent} />
+      {/* {sent ?  : null} */}
+      <Listposts newpost={newpost} />
     </>
   );
 }
