@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import "../styles/App.css";
-import Profile from "../components/profile";
+import "../styles/style.css";
+import Reactrouter from "../components/routes/router";
+/* import Profile from "../components/profile";
 import ProfilePic from "../components/profilepic";
 import "../styles/style.css";
 import XpPro from "../components/pro";
 import Compteur from "../components/compteur";
 import Register from "../components/register";
 import Listposts from "../components/listposts";
-import Postpost from "../components/newpost";
+import Postpost from "../components/newpost"; */
 
 function App() {
-  /*   const [name, setName] = useState("Ash Williams");
+  const [name, setName] = useState("Ash Williams");
   const [pic, setPic] = useState(
     "https://static.wikia.nocookie.net/the-dead-meat/images/9/9e/AshEvilDead2.jpg"
   );
@@ -20,10 +22,10 @@ function App() {
   const [phone, setPhone] = useState("00-435-759-103");
   const [pro, setPro] = useState(
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
-  ); */
+  );
 
-  /* const [time, setTime] = useState(new Date());
-  
+  const [time, setTime] = useState(new Date());
+
   const hour = time.getHours();
   const min = time.getMinutes();
   const sec = time.getSeconds();
@@ -34,21 +36,19 @@ function App() {
     }, 1000);
   }, [sec]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     setTimeout(() => {
       alert("PROUT !!!");
     }, 10000);
   }, []); */
 
-  const [sent, setSent] = useState(false);
   const [newpost, setNewpost] = useState({});
-
-  return (
+  /* return (
     <>
-      {/* <h1>
+      <h1>
         🕐 Il est {hour}h {min}min {sec}sec 🕐
-      </h1> */}
-      {/* <div className="profile_container">
+      </h1>
+      <div className="profile_container">
     <div className="pic_container">
     <ProfilePic 
     pic={pic}
@@ -75,14 +75,15 @@ function App() {
     <XpPro 
       pro={pro}
     />
-    </div> */}
-      {/*      <Compteur/> */}
-      {/* <Register/> */}
-      <Postpost setNewpost={setNewpost} setSent={setSent} />
-      {/* {sent ?  : null} */}
+    </div>
+            <Compteur/>
+      <Register/>
+      <Postpost setNewpost={setNewpost} />
       <Listposts newpost={newpost} />
     </>
-  );
+  ); */
+
+  return <Reactrouter />;
 }
 
 export default App;

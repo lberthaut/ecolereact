@@ -11,10 +11,13 @@ export default function Listposts({ newpost }) {
   const [error, setError] = useState(null);
 
   const getPosts = () => {
-    axios.get("https://jsonplaceholder.typicode.com/posts").then((resp) => {
-      setDatas(resp.data);
-      setLoaded(true);
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((resp) => {
+        setDatas(resp.data);
+        setLoaded(true);
+      })
+      .catch((err) => setError(err));
   };
 
   useEffect(() => {
@@ -23,8 +26,9 @@ export default function Listposts({ newpost }) {
 
   useEffect(() => {
     let dataswithnewpost = [...datas];
-    dataswithnewpost.push(newpost);
+    dataswithnewpost.unshift(newpost);
     setDatas(dataswithnewpost);
+    console.log(dataswithnewpost);
   }, [newpost]);
 
   let newdatas = [...datas];

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Input from "./input";
 
-export default function Postpost({ setSent, setNewpost }) {
+export default function Postpost({ setNewpost }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const postAxios = () => {
@@ -21,7 +21,6 @@ export default function Postpost({ setSent, setNewpost }) {
   function handleSubmit(e) {
     e.preventDefault();
     postAxios();
-    setSent(true);
   }
   return (
     <>
